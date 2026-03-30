@@ -2,7 +2,14 @@ SERIES = ['NCAR', 'INDY', 'NHRA']
 
 OWNERS = ['Scooter', 'Mark', 'Evan', 'Jake']
 
-RACE_FORMAT = "%10s | %4s | %50s | %10s | %10s | %04d | %04d | %04d | %04d | %04d | %04d | %04d | %04d"
+F_DRIVER = "{:>15}"
+F_DRIVER_RACE = "    " + F_DRIVER + " | {:>2} | {:>2} | {:>3}"
+F_RACE = "\n{:>10} ({:>4}) {:<50}"
+F_OWNER = "{:>7}"
+F_POINTS = "{:>5}"
+F_POINTS_AVERAGE = "{:>5.0f}"
+F_SERIES = F_OWNER + F_DRIVER + F_POINTS + F_POINTS + F_POINTS_AVERAGE
+F_SERIES_HEAD = F_OWNER + F_DRIVER + F_POINTS + F_POINTS + F_POINTS
 
 class Driver:
     def __init__(self, name, owner, series):
@@ -121,7 +128,7 @@ def print_schedule(races, point_schedule, drivers):
         if len(race.drivers) == 0:
             continue
 
-        print(race.date + ": " + race.track)
+        print(F_RACE.format(race.date, race.series, race.track))
         for driver_name in race.drivers:
             #import pdb;pdb.set_trace()
             driver = drivers[driver_name]
@@ -130,31 +137,37 @@ def print_schedule(races, point_schedule, drivers):
             driver.add_race_results(place, points)
 
             cumm_points = calc_cumm_points(driver.owner, drivers)
-       
-            print("    " + driver_name + ", " + place + ", " + str(points) + ", (" + str(cumm_points) + ")")
+
+            print(F_DRIVER_RACE.format(driver_name, place, points, cumm_points))
         
 def print_summary(drivers):
+    print(F_OWNER.format(""), end="")
+    for series in SERIES:
+        print(F_POINTS.format(series), end="")
+    print(F_POINTS.format("TOT"))
+
     for owner in OWNERS:
         total_owner_points = 0
-        print(owner, end="")
+        print(F_OWNER.format(owner), end="")
         for series in SERIES:
             sum_points = calc_sum_points(owner, series, drivers)
             total_owner_points += sum_points 
-            print(", " + series + ": " + str(sum_points), end="")
-        print(", TOTAL:" + str(total_owner_points))
+            print(F_POINTS.format(sum_points), end="")
+        print(F_POINTS.format(total_owner_points))
 
 
 def print_series(drivers):
     for series in SERIES:
         print("")
         print(series)
+        print(F_SERIES_HEAD.format("Owner", "Driver", "Pts", "Sts", "P/S"))
         series_drivers = get_series_drivers(drivers, series)
         series_drivers = sorted(series_drivers, key=lambda x: x.points, reverse=True)
         for driver in series_drivers:
-            avg_points_per_start = 0
+            avg_points_per_start = 0.0
             if driver.starts > 0:
                 avg_points_per_start = driver.points/driver.starts
-            print(driver.owner + ", " + driver.name + ", " + str(driver.points) + ", " + str(driver.starts) + ", " + str(avg_points_per_start)) 
+            print(F_SERIES.format(driver.owner, driver.name, driver.points, driver.starts, avg_points_per_start))
 
 drivers = load_drivers()
 races = load_races()
@@ -162,10 +175,7 @@ points = load_points()
 
 print_schedule(races, points, drivers)
 
+print("")
 print_summary(drivers)
 
 print_series(drivers)
-
-#print(drivers)
-#print(races)
-#print(points)
