@@ -1,6 +1,6 @@
-SERIES = {'NCAR', 'INDY', 'NHRA'}
+SERIES = ['NCAR', 'INDY', 'NHRA']
 
-OWNERS = {'Scooter', 'Mark', 'Evan', 'Jake'}
+OWNERS = ['Scooter', 'Mark', 'Evan', 'Jake']
 
 RACE_FORMAT = "%10s | %4s | %50s | %10s | %10s | %04d | %04d | %04d | %04d | %04d | %04d | %04d | %04d"
 
