@@ -1,0 +1,36 @@
+NCAR|Scooter|Blaney
+NCAR|Scooter|Larson
+NCAR|Scooter|Zilisch
+NCAR|Mark|Byron
+NCAR|Mark|Elliot
+NCAR|Mark|Van Gisbergen
+NCAR|Evan|Bell
+NCAR|Evan|Chastain
+NCAR|Evan|Hocevar
+NCAR|Jake|Hamlin
+NCAR|Jake|Briscoe
+NCAR|Jake|Logano
+INDY|Scooter|McLaughlin
+INDY|Scooter|Power
+INDY|Scooter|VeeKay
+INDY|Mark|O'Ward
+INDY|Mark|Ferruci
+INDY|Mark|Rasmussen
+INDY|Evan|Kirkwood
+INDY|Evan|Lundgard
+INDY|Evan|Malukas
+INDY|Jake|Palou
+INDY|Jake|Armstrong
+INDY|Jake|Newgarden
+NHRA|Scooter|Langdon (T)
+NHRA|Scooter|Torrence (T)
+NHRA|Scooter|Wilkerson (F)
+NHRA|Mark|Kalitta (T)
+NHRA|Mark|Pruett (T)
+NHRA|Mark|Beckman (F)
+NHRA|Evan|Stewart (T)
+NHRA|Evan|Millican (T)
+NHRA|Evan|Hagan (F)
+NHRA|Jake|Ashley (T)
+NHRA|Jake|Prock (F)
+NHRA|Jake|Capps (F)
