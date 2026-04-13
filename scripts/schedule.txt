@@ -11,8 +11,8 @@
 3/22/2026|NHRA|Wild Horse Pass Motorsports Park|Chandler, AZ|Drag|Langdon (T)|1|Kalitta (T)|4|Stewart (T)|8|Prock (F)|16
 3/29/2026|INDY|Barber Motosports Park|Leeds, AL|Road|McLaughlin|16|Ferruci|8|Kirkwood|5|Palou|1
 3/29/2026|NCAR|Martinsville Speedway|Ridgeway, VA|Oval|Blaney|6|Byron|5|Hocevar|17|Hamlin|2
-4/12/2026|NCAR|Bristol Motor Speedway|Bristol, TN|Oval||||||||
-4/12/2026|NHRA|Pomona Dragstrip|Pomona, CA|Drag||||||||
+4/12/2026|NCAR|Bristol Motor Speedway|Bristol, TN|Oval|Blaney|2|Byron|30|Hocevar|10|Hamlin|9
+4/12/2026|NHRA|Pomona Dragstrip|Pomona, CA|Drag|Langdon (T)|4|Kalitta (T)|4|Stewart (T)|1|Prock (F)|16
 4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street||||||||
 4/19/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval||||||||
 4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval||||||||
