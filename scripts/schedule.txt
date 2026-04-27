@@ -15,8 +15,8 @@
 4/12/2026|NHRA|Pomona Dragstrip|Pomona, CA|Drag|Langdon (T)|4|Kalitta (T)|4|Stewart (T)|1|Prock (F)|16
 4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street|McLaughlin|6|O'Ward|5|Kirkwood|4|Palou|1
 4/19/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval|Blaney|24|Byron|7|Hocevar|13|Hamlin|4
-4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval||||||||
-4/26/2026|NHRA|zMAX Dragway|Concord, NC|Drag||||||||
+4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval|Blaney|37|Byron|35|Hocevar|1|Hamlin|15
+4/26/2026|NHRA|zMAX Dragway|Concord, NC|Drag|Langdon (T)|2|Kalitta (T)|1|Stewart (T)|4|Capps (F)|1
 5/3/2026|NCAR|Texas Motor Speedway|Fort Worth, TX|Oval||||||||
 5/3/2026|NHRA|South Georgia Motosports Park|Adel, GA|Drag||||||||
 5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road||||||||
