@@ -1,0 +1,81 @@
+<html>
+<head>
+<style>
+        table caption {
+            padding:10px;
+            text-align: left;
+            font-size: 30px;
+        }
+        table {
+            border:1px solid #b3adad;
+            border-collapse:collapse;
+            padding:5px;
+        }
+        table th {
+            border:1px solid #b3adad;
+            padding:5px;
+            background: #f0f0f0;
+            color: #313030;
+        }
+        table td {
+            border:1px solid #b3adad;
+            text-align:center;
+            padding:5px;
+            background: #ffffff;
+            color: #313030;
+        }
+        table th.strong {
+            border-right:3px solid #b3adad;
+        }
+        table td.strong {
+            border-right:3px solid #b3adad;
+        }
+</style>
+</head>
+
+<!-- DRIVERS TABLE -->
+%DRIVERS_TABLE%
+
+<!-- SUMMARY TABLE -->
+%SUMMARY_TABLE%
+
+<!-- RACES TABLE -->
+<table>
+<caption>RACES</caption>
+<thead>
+<tr>
+    <th class="strong" colspan="5"></th>
+    <th class="strong" colspan="4">Scooter</th>
+    <th class="strong" colspan="4">Mark</th>
+    <th class="strong" colspan="4">Evan</th>
+    <th class="strong" colspan="4">Jake</th>
+</tr>
+<tr>
+    <th>Date</th>
+    <th>Series</th>
+    <th>Track</th>
+    <th>City</th>
+    <th class="strong">Type</th>
+    <th>Driver</th>
+    <th>Place</th>
+    <th>Points</th>
+    <th class="strong">Total</th>
+    <th>Driver</th>
+    <th>Place</th>
+    <th>Points</th>
+    <th class="strong">Total</th>
+    <th>Driver</th>
+    <th>Place</th>
+    <th>Points</th>
+    <th class="strong">Total</th>
+    <th>Driver</th>
+    <th>Place</th>
+    <th>Points</th>
+    <th class="strong">Total</th>
+</tr>
+</thead>
+<tbody>
+%RACES_TABLE%
+</tbody>
+</table>
+</html>

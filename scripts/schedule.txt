@@ -17,8 +17,8 @@
 4/19/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval|Blaney|24|Byron|7|Hocevar|13|Hamlin|4
 4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval|Blaney|37|Byron|35|Hocevar|1|Hamlin|15
 4/26/2026|NHRA|zMAX Dragway|Concord, NC|Drag|Langdon (T)|2|Kalitta (T)|1|Stewart (T)|4|Capps (F)|1
-5/3/2026|NCAR|Texas Motor Speedway|Fort Worth, TX|Oval||||||||
-5/3/2026|NHRA|South Georgia Motosports Park|Adel, GA|Drag||||||||
+5/3/2026|NCAR|Texas Motor Speedway|Fort Worth, TX|Oval|Larson|34|Byron|8|Hocevar|7|Hamlin|2
+5/3/2026|NHRA|South Georgia Motosports Park|Adel, GA|Drag|Langdon (T)|1|Kalitta (T)|2|Stewart (T)|16|Capps (F)|16
 5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road||||||||
 5/10/2026|NCAR|Watkins Glen International Raceway|Watkins Glen, NY|Road||||||||
 5/17/2026|NCAR|Dover Motor Speedway|Dover, DE|Oval||||||||

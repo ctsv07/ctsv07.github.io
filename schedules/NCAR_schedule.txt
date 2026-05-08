@@ -1,0 +1,36 @@
+2/15/2026|NCAR|Daytona International Raceway|Daytona Beach, FL|Oval|Blaney|27|Elliot|4|Bell|35|Hamlin|31
+2/22/2026|NCAR|Atlanta Motor Speedway|Hampton, GA|Oval|Blaney|10|Elliot|11|Bell|21|Hamlin|13
+3/1/2026|NCAR|Circuit of the Americas|Austin, TX|Road|Zilisch|14|Van Gisbergen|2|Chastain|35|Briscoe|37
+3/8/2026|NCAR|Phoenix Raceway|Avondale, AZ|Oval|Blaney|1|Byron|7|Chastain|28|Hamlin|5
+3/15/2026|NCAR|Las Vegas Motor Speedway|Las Vegas, NV|Oval|Blaney|16|Byron|3|Bell|4|Hamlin|1
+3/22/2026|NCAR|Darlington Raceway|Darlington, SC|Oval|Blaney|3|Elliot|15|Hocevar|4|Hamlin|11
+3/29/2026|NCAR|Martinsville Speedway|Ridgeway, VA|Oval|Blaney|6|Byron|5|Hocevar|17|Hamlin|2
+4/12/2026|NCAR|Bristol Motor Speedway|Bristol, TN|Oval|Blaney|2|Byron|30|Hocevar|10|Hamlin|9
+4/19/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval|Blaney|24|Byron|7|Hocevar|13|Hamlin|4
+4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval|Blaney|37|Byron|35|Hocevar|1|Hamlin|15
+5/3/2026|NCAR|Texas Motor Speedway|Fort Worth, TX|Oval|Larson|34|Byron|8|Hocevar|7|Hamlin|2
+5/10/2026|NCAR|Watkins Glen International Raceway|Watkins Glen, NY|Road||||||||
+5/17/2026|NCAR|Dover Motor Speedway|Dover, DE|Oval||||||||
+5/24/2026|NCAR|Charlotte Motor Speedway|Charlotte, NC|Oval||||||||
+5/31/2026|NCAR|Nashville Superspeedway|Lebanon, TN|Oval||||||||
+6/7/2026|NCAR|Michigan International Speedway|Brooklyn, MI|Oval||||||||
+6/14/2026|NCAR|Pocono Raceway|Long Pond, PA|Oval||||||||
+6/21/2026|NCAR|San Diego (Naval Base Coronado)|San Diego, CA|Street||||||||
+6/28/2026|NCAR|Sonoma Raceway|Sonoma, CA|Oval||||||||
+7/5/2026|NCAR|Chicagoland Speedway|Joliet, IL|Oval||||||||
+7/12/2026|NCAR|Atlanta Motor Speedway|Hampton, GA|Oval||||||||
+7/19/2026|NCAR|North Wilkesboro Raceway|North Wilkesboro, NC|Oval||||||||
+7/26/2026|NCAR|Indianapolis Motor Speedway|Indianapolis, IN|Oval||||||||
+8/9/2026|NCAR|Iowa Speedway|Newton, IA|Oval||||||||
+8/15/2026|NCAR|Richmond Raceway|Richmond, VA|Oval||||||||
+8/23/2026|NCAR|New Hampshire Speedway|Loudon, NH|Oval||||||||
+8/29/2026|NCAR|Daytona International Raceway|Daytona Beach, FL|Oval||||||||
+9/6/2026|NCAR|Darlington Raceway|Darlington, SC|Oval||||||||
+9/13/2026|NCAR|World Wide Technology Raceway|Madison, IL|Oval||||||||
+9/27/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval||||||||
+10/4/2026|NCAR|Las Vegas Motor Speedway|Las Vegas, NV|Oval||||||||
+10/11/2026|NCAR|Charlotte Motor Speedway|Charlotte, NC|Road||||||||
+10/18/2026|NCAR|Phoenix Raceway|Avondale, AZ|Oval||||||||
+10/25/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval||||||||
+11/1/2026|NCAR|Martinsville Speedway|Ridgeway, VA|Oval||||||||
+11/8/2026|NCAR|Homestead-Miami Speedway|Homestead, FL|Oval||||||||
