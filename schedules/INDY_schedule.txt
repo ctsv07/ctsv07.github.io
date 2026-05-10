@@ -3,7 +3,7 @@
 3/15/2026|INDY|Arlginton|Arlington, TX|Street|McLaughlin|11|O'Ward|5|Kirkwood|1|Palou|2
 3/29/2026|INDY|Barber Motosports Park|Leeds, AL|Road|McLaughlin|16|Ferruci|8|Kirkwood|5|Palou|1
 4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street|McLaughlin|6|O'Ward|5|Kirkwood|4|Palou|1
-5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road||||||||
+5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road|McLaughlin|16|O'Ward|18|Kirkwood|9|Palou|5
 5/24/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Oval||||||||
 5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street||||||||
 6/7/2026|INDY|World Wide Technology Raceway|Madison, IL|Oval||||||||

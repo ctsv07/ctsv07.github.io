@@ -9,7 +9,7 @@
 4/19/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval|Blaney|24|Byron|7|Hocevar|13|Hamlin|4
 4/26/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval|Blaney|37|Byron|35|Hocevar|1|Hamlin|15
 5/3/2026|NCAR|Texas Motor Speedway|Fort Worth, TX|Oval|Larson|34|Byron|8|Hocevar|7|Hamlin|2
-5/10/2026|NCAR|Watkins Glen International Raceway|Watkins Glen, NY|Road||||||||
+5/10/2026|NCAR|Watkins Glen International Raceway|Watkins Glen, NY|Road|Blaney|11|Van Gisbergen|1|Chastain|27|Hamlin|16
 5/17/2026|NCAR|Dover Motor Speedway|Dover, DE|Oval||||||||
 5/24/2026|NCAR|Charlotte Motor Speedway|Charlotte, NC|Oval||||||||
 5/31/2026|NCAR|Nashville Superspeedway|Lebanon, TN|Oval||||||||

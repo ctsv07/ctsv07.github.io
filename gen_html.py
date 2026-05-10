@@ -351,6 +351,8 @@ index_template = index_template.replace('%DRIVERS_TABLE%', drivers_html)
 index_template = index_template.replace('%SUMMARY_TABLE%', summary_html)
 index_template = index_template.replace('%RACES_TABLE%', races_html)
 
-gen_series(drivers)
+index_file = open("index.html", "w")
+index_file.write(index_template)
+index_file.close()
 
-print(index_template)
+gen_series(drivers)
