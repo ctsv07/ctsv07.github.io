@@ -15,6 +15,7 @@
         border:1px solid #b3adad;
         padding:5px;
         background: #f0f0f0;
+        user-select: none;
         color: #313030;
     }
     table td {
@@ -24,12 +25,22 @@
         background: #ffffff;
         color: #313030;
     }
+
     table th.strong {
-	border-right:3px solid #b3adad;
+        border-right:3px solid #b3adad;
     }
     table td.strong {
-	border-right:3px solid #b3adad;
+        border-right:3px solid #b3adad;
     }
+
+    th::after {
+        content: " ↕";
+        opacity: 0.3;
+        font-size: 0.8em;
+    }
+
+    th.asc::after  { content: " ↑"; opacity: 1; }
+    th.desc::after { content: " ↓"; opacity: 1; }
 </style>
 </head>
 	
@@ -52,4 +63,24 @@
 %DRIVER_SERIES_DATA%
 </tbody>
 </table>
+<script>
+document.querySelectorAll('th').forEach((th, i) => {
+  th.addEventListener('click', () => {
+    const tbody = th.closest('table').querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    const dir = th.classList.contains('asc') ? -1 : 1;
+    document.querySelectorAll('th').forEach(h => h.classList.remove('asc','desc'));
+    th.classList.add(dir > 0 ? 'asc' : 'desc');
+
+    rows.sort((a,b) => {
+      let x = a.children[i].textContent.trim();
+      let y = b.children[i].textContent.trim();
+      return (isNaN(x) || isNaN(y) ? x.localeCompare(y) : x - y) * dir;
+    });
+
+    rows.forEach(r => tbody.appendChild(r));
+  });
+});
+</script>
 </html>
