@@ -12,26 +12,28 @@ BORDER_STRONG="strong"
 TABLE_CELL='<td class="{}">{}</td>'
 
 class Driver:
-    def __init__(self, name, owner, series):
+    def __init__(self, owner, name, number, series):
         self.name = name
+        self.number = number
         self.owner = owner
         self.series = series
         self.points = 0
-        self.cumm_start_place = 0
         self.starts = 0
 
+        self.race_points = list()
         self.all_points = 0
         self.cumm_race_place = 0
         self.num_races = 0
 
     def add_race_results(self, place, points):
         self.points += int(points)
-        self.cumm_start_place += int(place)
         self.starts += 1
 
     def calc_race_stats(self, places, points_schedule, series):
         for place in places:
-            self.all_points += int(calc_points(place, points_schedule[series]))
+            race_points = int(calc_points(place, points_schedule[series]))
+            self.all_points += race_points
+            self.race_points.append(race_points)
             self.cumm_race_place += int(place)
             self.num_races += 1
  
@@ -79,9 +81,9 @@ def load_drivers(points_schedules):
         for driver_line in driver_file:
             driver_line = driver_line.strip('\n')
             driver_parts = driver_line.split('|')
-            driver = Driver(driver_parts[1], driver_parts[0], series) 
+            driver = Driver(driver_parts[0], driver_parts[1], driver_parts[2], series) 
 
-            driver.calc_race_stats(driver_parts[2:], points_schedules, series)
+            driver.calc_race_stats(driver_parts[3:], points_schedules, series)
 
             drivers.append(driver)
 
@@ -308,45 +310,88 @@ def gen_summary(drivers):
 
     return summary_html
 
+def gen_driver_points_chart_render(driver):
+    render_chart_template = load_html_template('series', 'render_chart_template.html')
+    return render_chart_template.replace('%DRIVER%', 'D' + driver.number);
+
+def gen_driver_points_array(driver):
+    chart_data_template = load_html_template('series', 'chart_data_template.html')
+    chart_data_template = chart_data_template.replace('%DRIVER%', 'D' + driver.number)
+    driver_points_array = ''
+    max_points = 0
+
+    for points in driver.race_points:
+        driver_points_array += '{value: ' + str(points) + '},'
+        if points > max_points:
+            max_points = points
+
+    # remove last comma
+    driver_points_array = driver_points_array[:-1]
+        
+    chart_data_template = chart_data_template.replace('%POINTS_HISTORY_DATA%', driver_points_array)
+
+    return chart_data_template, max_points
+
+def gen_series_driver_row(driver_row, driver):
+    avg_points_per_start = 0.0
+    points_per_race = 0
+    avg_finish = 0
+
+    # Avoid divide by zero if there are races started by driver.
+    if driver.starts > 0:
+        avg_points_per_start = driver.points/driver.starts
+
+    # Avoid divide by zero if there are no races completed yet.
+    if driver.num_races > 0:
+        points_per_race = driver.all_points/driver.num_races
+        avg_finish = driver.cumm_race_place/driver.num_races
+
+    driver_row = driver_row.replace('%OWNER%', driver.owner)
+    driver_row = driver_row.replace('%DRIVER%', driver.name)
+    driver_row = driver_row.replace('%DRIVER_NUMBER%', driver.number)
+    driver_row = driver_row.replace('%START_POINTS%', str(driver.points))
+    driver_row = driver_row.replace('%STARTS%', str(driver.starts))
+    driver_row = driver_row.replace('%POINTS_PER_START%', "{:.0f}".format(avg_points_per_start))
+
+    driver_row = driver_row.replace('%ALL_POINTS%', str(driver.all_points))
+    driver_row = driver_row.replace('%NUM_RACES%', str(driver.num_races))
+    driver_row = driver_row.replace('%POINTS_PER_RACE%', "{:.0f}".format(points_per_race))
+    driver_row = driver_row.replace('%AVG_FINISH%', "{:.0f}".format(avg_finish))
+
+    return driver_row
+
 def gen_series(drivers):
     series_template = load_html_template('series', 'series_template.html')
     driver_row_template = load_html_template('series', 'series_driver_template.html')
 
     for series in SERIES:
         drivers_html = ''
+        drivers_points_array = ''
+        drivers_points_render_chart = ''
+        max_points = 0
         series_html = series_template
 
         series_html = series_html.replace('%SERIES%', series)
         series_drivers = get_series_drivers(drivers, series)
         series_drivers = sorted(series_drivers, key=lambda x: (-x.points, -x.starts))
         for driver in series_drivers:
-            avg_points_per_start = 0.0
-            if driver.starts > 0:
-                avg_points_per_start = driver.points/driver.starts
-
-            if driver.num_races == 0:
-                points_per_race = 0
-                avg_finish = 0
-            else:
-                points_per_race = driver.all_points/driver.num_races
-                avg_finish = driver.cumm_race_place/driver.num_races
-
             driver_row = driver_row_template
 
-            driver_row = driver_row.replace('%OWNER%', driver.owner)
-            driver_row = driver_row.replace('%DRIVER%', driver.name)
-            driver_row = driver_row.replace('%START_POINTS%', str(driver.points))
-            driver_row = driver_row.replace('%STARTS%', str(driver.starts))
-            driver_row = driver_row.replace('%POINTS_PER_START%', "{:.0f}".format(avg_points_per_start))
+            driver_row = gen_series_driver_row(driver_row, driver)
 
-            driver_row = driver_row.replace('%ALL_POINTS%', str(driver.all_points))
-            driver_row = driver_row.replace('%NUM_RACES%', str(driver.num_races))
-            driver_row = driver_row.replace('%POINTS_PER_RACE%', "{:.0f}".format(points_per_race))
-            driver_row = driver_row.replace('%AVG_FINISH%', "{:.0f}".format(avg_finish))
+            drivers_points_render_chart += gen_driver_points_chart_render(driver)
+            temp_array, max_driver_points = gen_driver_points_array(driver)
+            drivers_points_array += temp_array
+
+            if max_driver_points > max_points:
+                max_points = max_driver_points
 
             drivers_html += driver_row
         
         series_html = series_html.replace('%DRIVER_SERIES_DATA%', drivers_html)
+        series_html = series_html.replace('%DRIVER_POINTS_RENDER%', drivers_points_render_chart)
+        series_html = series_html.replace('%DRIVER_POINTS_HISTORY_DATA%', drivers_points_array)
+        series_html = series_html.replace('%MAX_POINTS%', str(max_points))
 
         series_html_file = open(series + "_drivers.html", "w")
         series_html_file.write(series_html)

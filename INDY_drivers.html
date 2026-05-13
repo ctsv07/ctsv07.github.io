@@ -33,6 +33,7 @@
         border-right:3px solid #b3adad;
     }
 
+    /* Styles for sortable columns. */
     th::after {
         content: " ↕";
         opacity: 0.3;
@@ -41,6 +42,61 @@
 
     th.asc::after  { content: " ↑"; opacity: 1; }
     th.desc::after { content: " ↓"; opacity: 1; }
+
+    /* Styles for chart element */
+    .chart {
+        height: 70px;
+        width: 150px;
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        padding: 2px 2px 2px 2px;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    .bar-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        position: relative;
+    }
+
+    .bar {
+        width: 100%;
+        background: linear-gradient(to top, #3498db, #5dade2);
+        border-radius: 3px 3px 0 0;
+        transition: all 0.4s ease;
+        position: relative;
+     }
+
+     .bar:hover {
+        background: linear-gradient(to top, #2980b9, #3498db);
+        transform: scale(1.08);
+     }
+
+     .value {
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2c3e50;
+        color: white;
+        font-size: 13px;
+        padding: 2px 4px;
+        border-radius: 3px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .bar:hover .value {
+        opacity: 1;
+    }
+
+
 </style>
 </head>
 	
@@ -56,7 +112,8 @@
     <th>All Points</th>
     <th>Num Races</th>
     <th>Points/Race</th>
-    <th class="strong">Avg Finish</th>
+    <th>Avg Finish</th>
+    <th class="strong">Points History</th>
 </tr>
 </thead>
 <tbody>
@@ -69,7 +126,12 @@
     <td>118</td>
     <td>6</td>
     <td>20</td>
-    <td class="strong">6</td>
+    <td>6</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D10-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -80,7 +142,12 @@
     <td>98</td>
     <td>6</td>
     <td>16</td>
-    <td class="strong">4</td>
+    <td>4</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D27-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -91,7 +158,12 @@
     <td>54</td>
     <td>6</td>
     <td>9</td>
-    <td class="strong">9</td>
+    <td>9</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D5-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -102,7 +174,12 @@
     <td>41</td>
     <td>6</td>
     <td>7</td>
-    <td class="strong">10</td>
+    <td>10</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D3-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -113,7 +190,12 @@
     <td>79</td>
     <td>6</td>
     <td>13</td>
-    <td class="strong">6</td>
+    <td>6</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D12-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -124,7 +206,12 @@
     <td>6</td>
     <td>6</td>
     <td>1</td>
-    <td class="strong">15</td>
+    <td>15</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D14-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -135,7 +222,12 @@
     <td>21</td>
     <td>6</td>
     <td>4</td>
-    <td class="strong">14</td>
+    <td>14</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D26-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -146,7 +238,12 @@
     <td>4</td>
     <td>6</td>
     <td>1</td>
-    <td class="strong">14</td>
+    <td>14</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D76-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -157,7 +254,12 @@
     <td>0</td>
     <td>6</td>
     <td>0</td>
-    <td class="strong">19</td>
+    <td>19</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D21-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -168,7 +270,12 @@
     <td>80</td>
     <td>6</td>
     <td>13</td>
-    <td class="strong">8</td>
+    <td>8</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D7-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Jake</td>
@@ -179,7 +286,12 @@
     <td>52</td>
     <td>6</td>
     <td>9</td>
-    <td class="strong">8</td>
+    <td>8</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D2-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Jake</td>
@@ -190,12 +302,19 @@
     <td>26</td>
     <td>6</td>
     <td>4</td>
-    <td class="strong">11</td>
+    <td>11</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D66-chart"></div>
+        </div>
+    </td>
 </tr>
 
 </tbody>
 </table>
 <script>
+
+/* Add sortable column headers. */
 document.querySelectorAll('th').forEach((th, i) => {
   th.addEventListener('click', () => {
     const tbody = th.closest('table').querySelector('tbody');
@@ -214,5 +333,91 @@ document.querySelectorAll('th').forEach((th, i) => {
     rows.forEach(r => tbody.appendChild(r));
   });
 });
+
+/* Points history data. */
+let maxValue = 27;
+let D10Points = [
+    {value: 27},{value: 0},{value: 24},{value: 27},{value: 27},{value: 13}
+];
+let D27Points = [
+    {value: 15},{value: 24},{value: 27},{value: 13},{value: 15},{value: 4}
+];
+let D5Points = [
+    {value: 13},{value: 15},{value: 13},{value: 0},{value: 13},{value: 0}
+];
+let D3Points = [
+    {value: 24},{value: 6},{value: 0},{value: 0},{value: 11},{value: 0}
+];
+let D12Points = [
+    {value: 0},{value: 21},{value: 11},{value: 15},{value: 8},{value: 24}
+];
+let D14Points = [
+    {value: 0},{value: 0},{value: 0},{value: 6},{value: 0},{value: 0}
+];
+let D26Points = [
+    {value: 0},{value: 0},{value: 21},{value: 0},{value: 0},{value: 0}
+];
+let D76Points = [
+    {value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+];
+let D21Points = [
+    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+];
+let D7Points = [
+    {value: 21},{value: 0},{value: 8},{value: 24},{value: 0},{value: 27}
+];
+let D2Points = [
+    {value: 8},{value: 27},{value: 0},{value: 2},{value: 0},{value: 15}
+];
+let D66Points = [
+    {value: 0},{value: 13},{value: 2},{value: 11},{value: 0},{value: 0}
+];
+
+
+function renderCharts() {
+    renderChart('D10-chart', D10Points);
+    renderChart('D27-chart', D27Points);
+    renderChart('D5-chart', D5Points);
+    renderChart('D3-chart', D3Points);
+    renderChart('D12-chart', D12Points);
+    renderChart('D14-chart', D14Points);
+    renderChart('D26-chart', D26Points);
+    renderChart('D76-chart', D76Points);
+    renderChart('D21-chart', D21Points);
+    renderChart('D7-chart', D7Points);
+    renderChart('D2-chart', D2Points);
+    renderChart('D66-chart', D66Points);
+
+}
+
+/* Render a points history chart. */
+function renderChart(chartId, data) {
+    const chart = document.getElementById(chartId);
+    chart.innerHTML = '';
+
+    // Create bars
+    data.forEach(item => {
+        const percentage = (item.value / maxValue) * 100;
+
+        const barContainer = document.createElement('div');
+        barContainer.className = 'bar-container';
+
+        const bar = document.createElement('div');
+        bar.className = 'bar';
+        bar.style.height = percentage + '%';
+
+        // Value popup
+        const valueLabel = document.createElement('div');
+        valueLabel.className = 'value';
+        valueLabel.textContent = item.value;
+        bar.appendChild(valueLabel);
+
+        barContainer.appendChild(bar);
+        chart.appendChild(barContainer);
+    });
+}
+
+// Load chart
+window.onload = renderCharts;
 </script>
 </html>

@@ -33,6 +33,7 @@
         border-right:3px solid #b3adad;
     }
 
+    /* Styles for sortable columns. */
     th::after {
         content: " ↕";
         opacity: 0.3;
@@ -41,6 +42,61 @@
 
     th.asc::after  { content: " ↑"; opacity: 1; }
     th.desc::after { content: " ↓"; opacity: 1; }
+
+    /* Styles for chart element */
+    .chart {
+        height: 70px;
+        width: 150px;
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        padding: 2px 2px 2px 2px;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    .bar-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        position: relative;
+    }
+
+    .bar {
+        width: 100%;
+        background: linear-gradient(to top, #3498db, #5dade2);
+        border-radius: 3px 3px 0 0;
+        transition: all 0.4s ease;
+        position: relative;
+     }
+
+     .bar:hover {
+        background: linear-gradient(to top, #2980b9, #3498db);
+        transform: scale(1.08);
+     }
+
+     .value {
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2c3e50;
+        color: white;
+        font-size: 13px;
+        padding: 2px 4px;
+        border-radius: 3px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .bar:hover .value {
+        opacity: 1;
+    }
+
+
 </style>
 </head>
 	
@@ -56,7 +112,8 @@
     <th>All Points</th>
     <th>Num Races</th>
     <th>Points/Race</th>
-    <th class="strong">Avg Finish</th>
+    <th>Avg Finish</th>
+    <th class="strong">Points History</th>
 </tr>
 </thead>
 <tbody>
@@ -69,7 +126,12 @@
     <td>51</td>
     <td>12</td>
     <td>4</td>
-    <td class="strong">10</td>
+    <td>10</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D11-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -80,7 +142,12 @@
     <td>43</td>
     <td>12</td>
     <td>4</td>
-    <td class="strong">13</td>
+    <td>13</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D12-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -91,7 +158,12 @@
     <td>29</td>
     <td>12</td>
     <td>2</td>
-    <td class="strong">16</td>
+    <td>16</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D24-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -102,7 +174,12 @@
     <td>32</td>
     <td>12</td>
     <td>3</td>
-    <td class="strong">15</td>
+    <td>15</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D77-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -113,7 +190,12 @@
     <td>29</td>
     <td>12</td>
     <td>2</td>
-    <td class="strong">18</td>
+    <td>18</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D97-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Mark</td>
@@ -124,7 +206,12 @@
     <td>58</td>
     <td>12</td>
     <td>5</td>
-    <td class="strong">10</td>
+    <td>10</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D9-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -135,7 +222,12 @@
     <td>31</td>
     <td>12</td>
     <td>3</td>
-    <td class="strong">18</td>
+    <td>18</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D20-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Evan</td>
@@ -146,7 +238,12 @@
     <td>13</td>
     <td>12</td>
     <td>1</td>
-    <td class="strong">20</td>
+    <td>20</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D1-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -157,7 +254,12 @@
     <td>40</td>
     <td>12</td>
     <td>3</td>
-    <td class="strong">17</td>
+    <td>17</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D5-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Scooter</td>
@@ -168,7 +270,12 @@
     <td>0</td>
     <td>12</td>
     <td>0</td>
-    <td class="strong">26</td>
+    <td>26</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D88-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Jake</td>
@@ -179,7 +286,12 @@
     <td>36</td>
     <td>12</td>
     <td>3</td>
-    <td class="strong">18</td>
+    <td>18</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D19-chart"></div>
+        </div>
+    </td>
 </tr>
 <tr>
     <td>Jake</td>
@@ -190,12 +302,19 @@
     <td>22</td>
     <td>12</td>
     <td>2</td>
-    <td class="strong">22</td>
+    <td>22</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D22-chart"></div>
+        </div>
+    </td>
 </tr>
 
 </tbody>
 </table>
 <script>
+
+/* Add sortable column headers. */
 document.querySelectorAll('th').forEach((th, i) => {
   th.addEventListener('click', () => {
     const tbody = th.closest('table').querySelector('tbody');
@@ -214,5 +333,91 @@ document.querySelectorAll('th').forEach((th, i) => {
     rows.forEach(r => tbody.appendChild(r));
   });
 });
+
+/* Points history data. */
+let maxValue = 13;
+let D11Points = [
+    {value: 0},{value: 0},{value: 1},{value: 6},{value: 13},{value: 0},{value: 11},{value: 2},{value: 7},{value: 0},{value: 11},{value: 0}
+];
+let D12Points = [
+    {value: 0},{value: 1},{value: 3},{value: 13},{value: 0},{value: 9},{value: 5},{value: 11},{value: 0},{value: 0},{value: 1},{value: 0}
+];
+let D24Points = [
+    {value: 0},{value: 0},{value: 0},{value: 4},{value: 9},{value: 3},{value: 6},{value: 0},{value: 4},{value: 0},{value: 3},{value: 0}
+];
+let D77Points = [
+    {value: 0},{value: 7},{value: 0},{value: 0},{value: 0},{value: 7},{value: 0},{value: 1},{value: 0},{value: 13},{value: 4},{value: 0}
+];
+let D97Points = [
+    {value: 0},{value: 5},{value: 11},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 13}
+];
+let D9Points = [
+    {value: 7},{value: 0},{value: 4},{value: 0},{value: 11},{value: 0},{value: 13},{value: 0},{value: 3},{value: 7},{value: 13},{value: 0}
+];
+let D20Points = [
+    {value: 0},{value: 0},{value: 9},{value: 11},{value: 7},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+];
+let D1Points = [
+    {value: 0},{value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 4},{value: 0},{value: 0}
+];
+let D5Points = [
+    {value: 0},{value: 0},{value: 5},{value: 9},{value: 4},{value: 0},{value: 2},{value: 9},{value: 11},{value: 0},{value: 0},{value: 0}
+];
+let D88Points = [
+    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+];
+let D19Points = [
+    {value: 0},{value: 11},{value: 0},{value: 0},{value: 3},{value: 0},{value: 0},{value: 6},{value: 9},{value: 0},{value: 0},{value: 7}
+];
+let D22Points = [
+    {value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 9},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0}
+];
+
+
+function renderCharts() {
+    renderChart('D11-chart', D11Points);
+    renderChart('D12-chart', D12Points);
+    renderChart('D24-chart', D24Points);
+    renderChart('D77-chart', D77Points);
+    renderChart('D97-chart', D97Points);
+    renderChart('D9-chart', D9Points);
+    renderChart('D20-chart', D20Points);
+    renderChart('D1-chart', D1Points);
+    renderChart('D5-chart', D5Points);
+    renderChart('D88-chart', D88Points);
+    renderChart('D19-chart', D19Points);
+    renderChart('D22-chart', D22Points);
+
+}
+
+/* Render a points history chart. */
+function renderChart(chartId, data) {
+    const chart = document.getElementById(chartId);
+    chart.innerHTML = '';
+
+    // Create bars
+    data.forEach(item => {
+        const percentage = (item.value / maxValue) * 100;
+
+        const barContainer = document.createElement('div');
+        barContainer.className = 'bar-container';
+
+        const bar = document.createElement('div');
+        bar.className = 'bar';
+        bar.style.height = percentage + '%';
+
+        // Value popup
+        const valueLabel = document.createElement('div');
+        valueLabel.className = 'value';
+        valueLabel.textContent = item.value;
+        bar.appendChild(valueLabel);
+
+        barContainer.appendChild(bar);
+        chart.appendChild(barContainer);
+    });
+}
+
+// Load chart
+window.onload = renderCharts;
 </script>
 </html>
