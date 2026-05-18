@@ -118,31 +118,15 @@
 </thead>
 <tbody>
 <tr>
-    <td>Mark</td>
-    <td>Kalitta (T)</td>
-    <td>85</td>
-    <td>5</td>
-    <td class="strong">17</td>
-    <td>85</td>
-    <td>5</td>
-    <td>17</td>
-    <td>3</td>
-    <td class="strong">
-        <div class="container">
-            <div class="chart" id="D4-chart"></div>
-        </div>
-    </td>
-</tr>
-<tr>
     <td>Scooter</td>
     <td>Langdon (T)</td>
-    <td>77</td>
+    <td>100</td>
+    <td>5</td>
+    <td class="strong">20</td>
+    <td>100</td>
+    <td>6</td>
+    <td>17</td>
     <td>4</td>
-    <td class="strong">19</td>
-    <td>77</td>
-    <td>5</td>
-    <td>15</td>
-    <td>5</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D1-chart"></div>
@@ -150,15 +134,31 @@
     </td>
 </tr>
 <tr>
+    <td>Mark</td>
+    <td>Kalitta (T)</td>
+    <td>90</td>
+    <td>6</td>
+    <td class="strong">15</td>
+    <td>90</td>
+    <td>6</td>
+    <td>15</td>
+    <td>4</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D4-chart"></div>
+        </div>
+    </td>
+</tr>
+<tr>
     <td>Evan</td>
     <td>Stewart (T)</td>
-    <td>44</td>
-    <td>5</td>
-    <td class="strong">9</td>
-    <td>44</td>
-    <td>5</td>
-    <td>9</td>
-    <td>7</td>
+    <td>49</td>
+    <td>6</td>
+    <td class="strong">8</td>
+    <td>49</td>
+    <td>6</td>
+    <td>8</td>
+    <td>8</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D7-chart"></div>
@@ -169,11 +169,11 @@
     <td>Jake</td>
     <td>Capps (F)</td>
     <td>23</td>
-    <td>2</td>
-    <td class="strong">12</td>
-    <td>66</td>
-    <td>5</td>
-    <td>13</td>
+    <td>3</td>
+    <td class="strong">8</td>
+    <td>71</td>
+    <td>6</td>
+    <td>12</td>
     <td>7</td>
     <td class="strong">
         <div class="container">
@@ -187,10 +187,10 @@
     <td>0</td>
     <td>3</td>
     <td class="strong">0</td>
-    <td>0</td>
-    <td>5</td>
-    <td>0</td>
-    <td>19</td>
+    <td>11</td>
+    <td>6</td>
+    <td>2</td>
+    <td>17</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D11-chart"></div>
@@ -204,7 +204,7 @@
     <td>1</td>
     <td class="strong">0</td>
     <td>10</td>
-    <td>5</td>
+    <td>6</td>
     <td>2</td>
     <td>13</td>
     <td class="strong">
@@ -220,9 +220,9 @@
     <td>0</td>
     <td class="strong">0</td>
     <td>15</td>
-    <td>5</td>
-    <td>3</td>
-    <td>11</td>
+    <td>6</td>
+    <td>2</td>
+    <td>12</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D2-chart"></div>
@@ -235,10 +235,10 @@
     <td>0</td>
     <td>0</td>
     <td class="strong">0</td>
-    <td>41</td>
-    <td>5</td>
-    <td>8</td>
-    <td>8</td>
+    <td>52</td>
+    <td>6</td>
+    <td>9</td>
+    <td>7</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D5-chart"></div>
@@ -251,10 +251,10 @@
     <td>0</td>
     <td>0</td>
     <td class="strong">0</td>
-    <td>25</td>
+    <td>30</td>
+    <td>6</td>
     <td>5</td>
-    <td>5</td>
-    <td>12</td>
+    <td>11</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D6-chart"></div>
@@ -268,7 +268,7 @@
     <td>0</td>
     <td class="strong">0</td>
     <td>11</td>
-    <td>5</td>
+    <td>6</td>
     <td>2</td>
     <td>14</td>
     <td class="strong">
@@ -283,8 +283,8 @@
     <td>0</td>
     <td>0</td>
     <td class="strong">0</td>
-    <td>55</td>
-    <td>5</td>
+    <td>66</td>
+    <td>6</td>
     <td>11</td>
     <td>5</td>
     <td class="strong">
@@ -300,9 +300,9 @@
     <td>0</td>
     <td class="strong">0</td>
     <td>36</td>
-    <td>5</td>
-    <td>7</td>
-    <td>9</td>
+    <td>6</td>
+    <td>6</td>
+    <td>10</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D10-chart"></div>
@@ -336,47 +336,47 @@ document.querySelectorAll('th').forEach((th, i) => {
 
 /* Points history data. */
 let maxValue = 23;
-let D4Points = [
-    {value: 20},{value: 11},{value: 11},{value: 23},{value: 20}
-];
 let D1Points = [
-    {value: 0},{value: 23},{value: 11},{value: 20},{value: 23}
+    {value: 0},{value: 23},{value: 11},{value: 20},{value: 23},{value: 23}
+];
+let D4Points = [
+    {value: 20},{value: 11},{value: 11},{value: 23},{value: 20},{value: 5}
 ];
 let D7Points = [
-    {value: 5},{value: 5},{value: 23},{value: 11},{value: 0}
+    {value: 5},{value: 5},{value: 23},{value: 11},{value: 0},{value: 5}
 ];
 let D12Points = [
-    {value: 0},{value: 23},{value: 20},{value: 23},{value: 0}
+    {value: 0},{value: 23},{value: 20},{value: 23},{value: 0},{value: 5}
 ];
 let D11Points = [
-    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 11}
 ];
 let D3Points = [
-    {value: 5},{value: 5},{value: 0},{value: 0},{value: 0}
+    {value: 5},{value: 5},{value: 0},{value: 0},{value: 0},{value: 0}
 ];
 let D2Points = [
-    {value: 0},{value: 5},{value: 0},{value: 5},{value: 5}
+    {value: 0},{value: 5},{value: 0},{value: 5},{value: 5},{value: 0}
 ];
 let D5Points = [
-    {value: 5},{value: 20},{value: 0},{value: 11},{value: 5}
+    {value: 5},{value: 20},{value: 0},{value: 11},{value: 5},{value: 11}
 ];
 let D6Points = [
-    {value: 0},{value: 0},{value: 5},{value: 20},{value: 0}
+    {value: 0},{value: 0},{value: 5},{value: 20},{value: 0},{value: 5}
 ];
 let D8Points = [
-    {value: 0},{value: 0},{value: 0},{value: 0},{value: 11}
+    {value: 0},{value: 0},{value: 0},{value: 0},{value: 11},{value: 0}
 ];
 let D9Points = [
-    {value: 5},{value: 11},{value: 23},{value: 11},{value: 5}
+    {value: 5},{value: 11},{value: 23},{value: 11},{value: 5},{value: 11}
 ];
 let D10Points = [
-    {value: 0},{value: 0},{value: 20},{value: 5},{value: 11}
+    {value: 0},{value: 0},{value: 20},{value: 5},{value: 11},{value: 0}
 ];
 
 
 function renderCharts() {
-    renderChart('D4-chart', D4Points);
     renderChart('D1-chart', D1Points);
+    renderChart('D4-chart', D4Points);
     renderChart('D7-chart', D7Points);
     renderChart('D12-chart', D12Points);
     renderChart('D11-chart', D11Points);

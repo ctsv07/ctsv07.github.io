@@ -378,9 +378,9 @@ def gen_series(drivers):
             driver_row = driver_row_template
 
             driver_row = gen_series_driver_row(driver_row, driver)
-
             drivers_points_render_chart += gen_driver_points_chart_render(driver)
             temp_array, max_driver_points = gen_driver_points_array(driver)
+
             drivers_points_array += temp_array
 
             if max_driver_points > max_points:
@@ -397,14 +397,17 @@ def gen_series(drivers):
         series_html_file.write(series_html)
         series_html_file.close()
 
+# Load data elements
 series, races = load_races()
 points_schedules = load_points_schedule()
 drivers = load_drivers(points_schedules)
 
+# Generate index sections
 races_html = gen_races(series, races, points_schedules, drivers)
 summary_html = gen_summary(drivers)
 drivers_html = gen_drivers(drivers)
 
+# Update index template
 index_template = load_html_template('index', 'index_template.html')
 index_template = index_template.replace('%DRIVERS_TABLE%', drivers_html)
 index_template = index_template.replace('%SUMMARY_TABLE%', summary_html)
@@ -414,4 +417,5 @@ index_file = open("index.html", "w")
 index_file.write(index_template)
 index_file.close()
 
+# Generate series pages
 gen_series(drivers)
