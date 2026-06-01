@@ -5,7 +5,7 @@
 4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street|McLaughlin|6|O'Ward|5|Kirkwood|4|Palou|1
 5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road|McLaughlin|16|O'Ward|18|Kirkwood|9|Palou|5
 5/24/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Oval|McLaughlin|3|Ferruci|8|Malukas|2|Palou|7
-5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street||||||||
+5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street|McLaughlin|19|O'Ward|4|Kirkwood|2|Palou|1
 6/7/2026|INDY|World Wide Technology Raceway|Madison, IL|Oval||||||||
 6/21/2026|INDY|Road America|Elkhart, WI|Road||||||||
 7/5/2026|INDY|Mid-Ohio Sports Car Course|Lexington, OH|Road||||||||
