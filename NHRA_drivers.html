@@ -121,8 +121,8 @@
     <td>Scooter</td>
     <td>Langdon (T)</td>
     <td>123</td>
-    <td>6</td>
-    <td class="strong">20</td>
+    <td>7</td>
+    <td class="strong">18</td>
     <td>123</td>
     <td>7</td>
     <td>18</td>
@@ -168,9 +168,9 @@
 <tr>
     <td>Jake</td>
     <td>Capps (F)</td>
-    <td>34</td>
+    <td>39</td>
     <td>4</td>
-    <td class="strong">8</td>
+    <td class="strong">10</td>
     <td>82</td>
     <td>7</td>
     <td>12</td>
@@ -199,22 +199,6 @@
 </tr>
 <tr>
     <td>Scooter</td>
-    <td>Wilkerson (F)</td>
-    <td>0</td>
-    <td>1</td>
-    <td class="strong">0</td>
-    <td>10</td>
-    <td>7</td>
-    <td>1</td>
-    <td>14</td>
-    <td class="strong">
-        <div class="container">
-            <div class="chart" id="D3-chart"></div>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>Scooter</td>
     <td>Torrence (T)</td>
     <td>0</td>
     <td>0</td>
@@ -226,6 +210,22 @@
     <td class="strong">
         <div class="container">
             <div class="chart" id="D2-chart"></div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Scooter</td>
+    <td>Wilkerson (F)</td>
+    <td>0</td>
+    <td>0</td>
+    <td class="strong">0</td>
+    <td>10</td>
+    <td>7</td>
+    <td>1</td>
+    <td>14</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D3-chart"></div>
         </div>
     </td>
 </tr>
@@ -351,11 +351,11 @@ let D12Points = [
 let D11Points = [
     {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 11},{value: 23}
 ];
-let D3Points = [
-    {value: 5},{value: 5},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
-];
 let D2Points = [
     {value: 0},{value: 5},{value: 0},{value: 5},{value: 5},{value: 0},{value: 11}
+];
+let D3Points = [
+    {value: 5},{value: 5},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
 ];
 let D5Points = [
     {value: 5},{value: 20},{value: 0},{value: 11},{value: 5},{value: 11},{value: 11}
@@ -380,8 +380,8 @@ function renderCharts() {
     renderChart('D7-chart', D7Points);
     renderChart('D12-chart', D12Points);
     renderChart('D11-chart', D11Points);
-    renderChart('D3-chart', D3Points);
     renderChart('D2-chart', D2Points);
+    renderChart('D3-chart', D3Points);
     renderChart('D5-chart', D5Points);
     renderChart('D6-chart', D6Points);
     renderChart('D8-chart', D8Points);

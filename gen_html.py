@@ -20,6 +20,7 @@ class Driver:
         self.points = 0
         self.starts = 0
 
+        self.race_places = list()
         self.race_points = list()
         self.all_points = 0
         self.cumm_race_place = 0
@@ -33,22 +34,24 @@ class Driver:
         for place in places:
             race_points = int(calc_points(place, points_schedule[series]))
             self.all_points += race_points
+            self.race_places.append(place)
             self.race_points.append(race_points)
             self.cumm_race_place += int(place)
             self.num_races += 1
  
 class Race:
-    def __init__(self, date, series, track, location, race_type):
+    def __init__(self, race_num, date, series, track, location, race_type):
+        self.race_num = race_num
         self.date = date
         self.date_obj = datetime.strptime(date, '%m/%d/%Y').date()
         self.series = series
         self.track = track
         self.race_type = race_type
         self.location = location
-        self.drivers = dict()
+        self.drivers = list()
 
-    def add_driver(self, name, place):
-        self.drivers[name] = place
+    def add_driver(self, name):
+        self.drivers.append(name)
 
 def load_html_template(temp_dir, file_name):
     template_file = open('templates/' + temp_dir + '/' + file_name, 'r')
@@ -100,19 +103,21 @@ def load_races():
    
         schedule_file = open(schedule_file_name, "r") 
 
+        race_num = 0
         for race_line in schedule_file:
             race_line = race_line.strip('\n')
             race_parts = race_line.split('|')
 
-            race = Race(race_parts[0], race_parts[1], race_parts[2], race_parts[3], race_parts[4])
+            race = Race(race_num, race_parts[0], race_parts[1], race_parts[2], race_parts[3], race_parts[4])
             if race_parts[5] != "":
-                race.add_driver(race_parts[5], race_parts[6])
-                race.add_driver(race_parts[7], race_parts[8])
-                race.add_driver(race_parts[9], race_parts[10])
-                #import pdb;pdb.set_trace()
-                race.add_driver(race_parts[11], race_parts[12])
+                race.add_driver(race_parts[5])
+                race.add_driver(race_parts[6])
+                race.add_driver(race_parts[7])
+                race.add_driver(race_parts[8])
 
             races.append(race)
+
+            race_num += 1
 
     races = sorted(races, key=lambda x: x.date_obj)
 
@@ -218,13 +223,13 @@ def gen_drivers(drivers):
     return drivers_template_html
 
 
-def gen_driver_result_cells(race, points_schedule):
+def gen_driver_result_cells(race, points_schedule, drivers):
     driver_results_html = ''
     driver_result_html = load_html_template('races', 'driver_result_row_template.html')
 
     for driver_name in race.drivers:
         driver = get_driver(drivers, race.series, driver_name)
-        place = race.drivers[driver_name]
+        place = driver.race_places[race.race_num]
         points = calc_points(place, points_schedule[race.series])
         driver.add_race_results(place, points)
 
@@ -232,7 +237,7 @@ def gen_driver_result_cells(race, points_schedule):
 
         temp_html = driver_result_html
         temp_html = temp_html.replace('%DRIVER_NAME%', driver_name)
-        temp_html = temp_html.replace('%DRIVER_PLACE%', place)
+        temp_html = temp_html.replace('%DRIVER_PLACE%', str(place))
         temp_html = temp_html.replace('%DRIVER_POINTS%', str(points))
         temp_html = temp_html.replace('%OWNER_CUMM_POINTS%', str(cumm_points))
 
@@ -240,7 +245,7 @@ def gen_driver_result_cells(race, points_schedule):
 
     return driver_results_html
 
-def gen_race_row(race, points_schedule):
+def gen_race_row(race, points_schedule, drivers):
     race_html = load_html_template('races', 'race_row_template.html')
 
     race_html = race_html.replace('%RACE_DATE%', race.date) 
@@ -249,7 +254,7 @@ def gen_race_row(race, points_schedule):
     race_html = race_html.replace('%RACE_LOCATION%', race.location) 
     race_html = race_html.replace('%RACE_TYPE%', race.race_type) 
 
-    driver_results_html = gen_driver_result_cells(race, points_schedule)
+    driver_results_html = gen_driver_result_cells(race, points_schedule, drivers)
 
     race_html = race_html.replace('%DRIVER_RESULTS%', driver_results_html) 
 
@@ -259,7 +264,7 @@ def gen_races(series, races, points_schedule, drivers):
     races_html = ''
 
     for race in races:
-        races_html += gen_race_row(race, points_schedule)
+        races_html += gen_race_row(race, points_schedule, drivers)
 
     return races_html
 

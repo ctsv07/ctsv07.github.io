@@ -1,11 +1,11 @@
-3/1/2026|INDY|St. Petersburg|St. Petersburg, FL|Street|McLaughlin|2|O'Ward|5|Kirkwood|4|Palou|1
-3/7/2026|INDY|Phoenix Raceway|Avondale, AZ|Oval|McLaughlin|8|O'Ward|4|Malukas|3|Palou|24
-3/15/2026|INDY|Arlginton|Arlington, TX|Street|McLaughlin|11|O'Ward|5|Kirkwood|1|Palou|2
-3/29/2026|INDY|Barber Motosports Park|Leeds, AL|Road|McLaughlin|16|Ferruci|8|Kirkwood|5|Palou|1
-4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street|McLaughlin|6|O'Ward|5|Kirkwood|4|Palou|1
-5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road|McLaughlin|16|O'Ward|18|Kirkwood|9|Palou|5
-5/24/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Oval|McLaughlin|3|Ferruci|8|Malukas|2|Palou|7
-5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street|McLaughlin|19|O'Ward|4|Kirkwood|2|Palou|1
+3/1/2026|INDY|St. Petersburg|St. Petersburg, FL|Street|McLaughlin|O'Ward|Kirkwood|Palou
+3/7/2026|INDY|Phoenix Raceway|Avondale, AZ|Oval|McLaughlin|O'Ward|Malukas|Palou
+3/15/2026|INDY|Arlginton|Arlington, TX|Street|McLaughlin|O'Ward|Kirkwood|Palou
+3/29/2026|INDY|Barber Motosports Park|Leeds, AL|Road|McLaughlin|Ferruci|Kirkwood|Palou
+4/19/2026|INDY|Long Beach Street|Long Beach, CA|Street|McLaughlin|O'Ward|Kirkwood|Palou
+5/9/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Road|McLaughlin|O'Ward|Kirkwood|Palou
+5/24/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Oval|McLaughlin|Ferruci|Malukas|Palou
+5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street|McLaughlin|O'Ward|Kirkwood|Palou
 6/7/2026|INDY|World Wide Technology Raceway|Madison, IL|Oval||||||||
 6/21/2026|INDY|Road America|Elkhart, WI|Road||||||||
 7/5/2026|INDY|Mid-Ohio Sports Car Course|Lexington, OH|Road||||||||
