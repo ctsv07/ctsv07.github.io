@@ -7,7 +7,7 @@
 5/24/2026|INDY|Indianapolis Motor Speedway|Indianapolis, IN|Oval|McLaughlin|Ferruci|Malukas|Palou
 5/31/2026|INDY|Detroit Street Circuit|Detroit, MI|Street|McLaughlin|O'Ward|Kirkwood|Palou
 6/7/2026|INDY|World Wide Technology Raceway|Madison, IL|Oval|McLaughlin|O'Ward|Kirkwood|Palou
-6/21/2026|INDY|Road America|Elkhart, WI|Road||||||||
+6/21/2026|INDY|Road America|Elkhart, WI|Road|McLaughlin|Ferruci|Malukas|Palou
 7/5/2026|INDY|Mid-Ohio Sports Car Course|Lexington, OH|Road||||||||
 7/19/2026|INDY|Nashville Superspeedway|Lebanon, TN|Oval||||||||
 8/9/2026|INDY|Portland Interional Raceway|Portland, OR|Road||||||||
