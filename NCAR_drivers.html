@@ -121,12 +121,12 @@
     <td>Jake</td>
     <td>Hamlin</td>
     <td>102</td>
-    <td>16</td>
+    <td>17</td>
     <td class="strong">6</td>
     <td>112</td>
-    <td>18</td>
+    <td>19</td>
     <td>6</td>
-    <td>8</td>
+    <td>9</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D11-chart"></div>
@@ -136,16 +136,32 @@
 <tr>
     <td>Scooter</td>
     <td>Blaney</td>
-    <td>52</td>
-    <td>16</td>
+    <td>57</td>
+    <td>17</td>
     <td class="strong">3</td>
-    <td>56</td>
-    <td>18</td>
+    <td>61</td>
+    <td>19</td>
     <td>3</td>
-    <td>12</td>
+    <td>11</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D12-chart"></div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Mark</td>
+    <td>Van Gisbergen</td>
+    <td>37</td>
+    <td>4</td>
+    <td class="strong">9</td>
+    <td>48</td>
+    <td>19</td>
+    <td>3</td>
+    <td>19</td>
+    <td class="strong">
+        <div class="container">
+            <div class="chart" id="D97-chart"></div>
         </div>
     </td>
 </tr>
@@ -156,7 +172,7 @@
     <td>9</td>
     <td class="strong">3</td>
     <td>44</td>
-    <td>18</td>
+    <td>19</td>
     <td>2</td>
     <td>16</td>
     <td class="strong">
@@ -169,10 +185,10 @@
     <td>Evan</td>
     <td>Hocevar</td>
     <td>25</td>
-    <td>8</td>
+    <td>9</td>
     <td class="strong">3</td>
     <td>39</td>
-    <td>18</td>
+    <td>19</td>
     <td>2</td>
     <td>15</td>
     <td class="strong">
@@ -182,31 +198,15 @@
     </td>
 </tr>
 <tr>
-    <td>Mark</td>
-    <td>Van Gisbergen</td>
-    <td>24</td>
-    <td>3</td>
-    <td class="strong">8</td>
-    <td>35</td>
-    <td>18</td>
-    <td>2</td>
-    <td>20</td>
-    <td class="strong">
-        <div class="container">
-            <div class="chart" id="D97-chart"></div>
-        </div>
-    </td>
-</tr>
-<tr>
     <td>Evan</td>
     <td>Bell</td>
     <td>18</td>
     <td>7</td>
     <td class="strong">3</td>
-    <td>53</td>
-    <td>18</td>
-    <td>3</td>
+    <td>59</td>
     <td>19</td>
+    <td>3</td>
+    <td>18</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D20-chart"></div>
@@ -220,7 +220,7 @@
     <td>6</td>
     <td class="strong">1</td>
     <td>62</td>
-    <td>18</td>
+    <td>19</td>
     <td>3</td>
     <td>14</td>
     <td class="strong">
@@ -236,9 +236,9 @@
     <td>3</td>
     <td class="strong">0</td>
     <td>20</td>
-    <td>18</td>
+    <td>19</td>
     <td>1</td>
-    <td>21</td>
+    <td>20</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D1-chart"></div>
@@ -251,10 +251,10 @@
     <td>0</td>
     <td>2</td>
     <td class="strong">0</td>
-    <td>57</td>
-    <td>18</td>
-    <td>3</td>
-    <td>16</td>
+    <td>68</td>
+    <td>19</td>
+    <td>4</td>
+    <td>15</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D19-chart"></div>
@@ -267,8 +267,8 @@
     <td>0</td>
     <td>1</td>
     <td class="strong">0</td>
-    <td>68</td>
-    <td>18</td>
+    <td>75</td>
+    <td>19</td>
     <td>4</td>
     <td>15</td>
     <td class="strong">
@@ -283,10 +283,10 @@
     <td>0</td>
     <td>1</td>
     <td class="strong">0</td>
-    <td>6</td>
-    <td>18</td>
-    <td>0</td>
-    <td>27</td>
+    <td>10</td>
+    <td>19</td>
+    <td>1</td>
+    <td>26</td>
     <td class="strong">
         <div class="container">
             <div class="chart" id="D88-chart"></div>
@@ -300,7 +300,7 @@
     <td>0</td>
     <td class="strong">0</td>
     <td>29</td>
-    <td>18</td>
+    <td>19</td>
     <td>2</td>
     <td>21</td>
     <td class="strong">
@@ -337,49 +337,49 @@ document.querySelectorAll('th').forEach((th, i) => {
 /* Points history data. */
 let maxValue = 13;
 let D11Points = [
-    {value: 0},{value: 0},{value: 1},{value: 6},{value: 13},{value: 0},{value: 11},{value: 2},{value: 7},{value: 0},{value: 11},{value: 0},{value: 13},{value: 9},{value: 13},{value: 13},{value: 13},{value: 0}
+    {value: 0},{value: 0},{value: 1},{value: 6},{value: 13},{value: 0},{value: 11},{value: 2},{value: 7},{value: 0},{value: 11},{value: 0},{value: 13},{value: 9},{value: 13},{value: 13},{value: 13},{value: 0},{value: 0}
 ];
 let D12Points = [
-    {value: 0},{value: 1},{value: 3},{value: 13},{value: 0},{value: 9},{value: 5},{value: 11},{value: 0},{value: 0},{value: 1},{value: 0},{value: 0},{value: 4},{value: 3},{value: 3},{value: 1},{value: 2}
-];
-let D24Points = [
-    {value: 0},{value: 0},{value: 0},{value: 4},{value: 9},{value: 3},{value: 6},{value: 0},{value: 4},{value: 0},{value: 3},{value: 0},{value: 4},{value: 2},{value: 0},{value: 0},{value: 9},{value: 0}
-];
-let D77Points = [
-    {value: 0},{value: 7},{value: 0},{value: 0},{value: 0},{value: 7},{value: 0},{value: 1},{value: 0},{value: 13},{value: 4},{value: 0},{value: 0},{value: 0},{value: 1},{value: 6},{value: 0},{value: 0}
+    {value: 0},{value: 1},{value: 3},{value: 13},{value: 0},{value: 9},{value: 5},{value: 11},{value: 0},{value: 0},{value: 1},{value: 0},{value: 0},{value: 4},{value: 3},{value: 3},{value: 1},{value: 2},{value: 5}
 ];
 let D97Points = [
-    {value: 0},{value: 5},{value: 11},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 13},{value: 0},{value: 0},{value: 6},{value: 0},{value: 0},{value: 0}
+    {value: 0},{value: 5},{value: 11},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 13},{value: 0},{value: 0},{value: 6},{value: 0},{value: 0},{value: 0},{value: 13}
+];
+let D24Points = [
+    {value: 0},{value: 0},{value: 0},{value: 4},{value: 9},{value: 3},{value: 6},{value: 0},{value: 4},{value: 0},{value: 3},{value: 0},{value: 4},{value: 2},{value: 0},{value: 0},{value: 9},{value: 0},{value: 0}
+];
+let D77Points = [
+    {value: 0},{value: 7},{value: 0},{value: 0},{value: 0},{value: 7},{value: 0},{value: 1},{value: 0},{value: 13},{value: 4},{value: 0},{value: 0},{value: 0},{value: 1},{value: 6},{value: 0},{value: 0},{value: 0}
 ];
 let D20Points = [
-    {value: 0},{value: 0},{value: 9},{value: 11},{value: 7},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 11},{value: 11},{value: 0},{value: 0},{value: 0}
+    {value: 0},{value: 0},{value: 9},{value: 11},{value: 7},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 11},{value: 11},{value: 0},{value: 0},{value: 0},{value: 6}
 ];
 let D9Points = [
-    {value: 7},{value: 0},{value: 4},{value: 0},{value: 11},{value: 0},{value: 13},{value: 0},{value: 3},{value: 7},{value: 13},{value: 0},{value: 0},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0}
+    {value: 7},{value: 0},{value: 4},{value: 0},{value: 11},{value: 0},{value: 13},{value: 0},{value: 3},{value: 7},{value: 13},{value: 0},{value: 0},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0}
 ];
 let D1Points = [
-    {value: 0},{value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 3},{value: 4}
+    {value: 0},{value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 3},{value: 4},{value: 0}
 ];
 let D19Points = [
-    {value: 0},{value: 11},{value: 0},{value: 0},{value: 3},{value: 0},{value: 0},{value: 6},{value: 9},{value: 0},{value: 0},{value: 7},{value: 11},{value: 0},{value: 9},{value: 1},{value: 0},{value: 0}
+    {value: 0},{value: 11},{value: 0},{value: 0},{value: 3},{value: 0},{value: 0},{value: 6},{value: 9},{value: 0},{value: 0},{value: 7},{value: 11},{value: 0},{value: 9},{value: 1},{value: 0},{value: 0},{value: 11}
 ];
 let D5Points = [
-    {value: 0},{value: 0},{value: 5},{value: 9},{value: 4},{value: 0},{value: 2},{value: 9},{value: 11},{value: 0},{value: 0},{value: 0},{value: 0},{value: 6},{value: 0},{value: 7},{value: 6},{value: 9}
+    {value: 0},{value: 0},{value: 5},{value: 9},{value: 4},{value: 0},{value: 2},{value: 9},{value: 11},{value: 0},{value: 0},{value: 0},{value: 0},{value: 6},{value: 0},{value: 7},{value: 6},{value: 9},{value: 7}
 ];
 let D88Points = [
-    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 6},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0}
+    {value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 6},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 4}
 ];
 let D22Points = [
-    {value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 9},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 3},{value: 0},{value: 4},{value: 0},{value: 0}
+    {value: 9},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 9},{value: 4},{value: 0},{value: 0},{value: 0},{value: 0},{value: 0},{value: 3},{value: 0},{value: 4},{value: 0},{value: 0},{value: 0}
 ];
 
 
 function renderCharts() {
     renderChart('D11-chart', D11Points);
     renderChart('D12-chart', D12Points);
+    renderChart('D97-chart', D97Points);
     renderChart('D24-chart', D24Points);
     renderChart('D77-chart', D77Points);
-    renderChart('D97-chart', D97Points);
     renderChart('D20-chart', D20Points);
     renderChart('D9-chart', D9Points);
     renderChart('D1-chart', D1Points);
