@@ -17,7 +17,7 @@
 6/14/2026|NCAR|Pocono Raceway|Long Pond, PA|Oval|Blaney|Elliot|Bell|Hamlin
 6/21/2026|NCAR|San Diego (Naval Base Coronado)|San Diego, CA|Street|Blaney|Van Gisbergen|Hocevar|Hamlin
 6/28/2026|NCAR|Sonoma Raceway|Sonoma, CA|Oval|Blaney|Van Gisbergen|Hocevar|Hamlin
-7/5/2026|NCAR|Chicagoland Speedway|Joliet, IL|Oval||||||||
+7/5/2026|NCAR|Chicagoland Speedway|Joliet, IL|Oval|Blaney|Elliot|Bell|Hamlin
 7/12/2026|NCAR|Atlanta Motor Speedway|Hampton, GA|Oval||||||||
 7/19/2026|NCAR|North Wilkesboro Raceway|North Wilkesboro, NC|Oval||||||||
 7/26/2026|NCAR|Indianapolis Motor Speedway|Indianapolis, IN|Oval||||||||
