@@ -8,7 +8,7 @@
 6/7/2026|NHRA|New England Dragway|Epping, NH|Drag|Langdon (T)|Kalitta (T)|Stewart (T)|Capps (F)
 6/14/2026|NHRA|Bristol Dragway|Bristol, TN|Drag|Langdon (T)|Kalitta (T)|Stewart (T)|Capps (F)
 6/28/2026|NHRA|Summit Racing Motorsports Park|Norwalk, OH|Drag|Langdon (T)|Kalitta (T)|Stewart (T)|Capps (F)
-7/19/2026|NHRA|Sonoma Raceway|Sonoma, CA|Drag||||||||
+7/19/2026|NHRA|Sonoma Raceway|Sonoma, CA|Drag|Langdon (T)|Kalitta (T)|Stewart (T)|Capps (F)
 7/26/2026|NHRA|Pacific Raceways|Kent, WA|Drag||||||||
 8/23/2026|NHRA|Brainerd International Raceway|Brainerd, MN|Drag||||||||
 9/7/2026|NHRA|Lucas Oil Indianapolis Raceway Park|Indianapolis, IN|Drag||||||||
