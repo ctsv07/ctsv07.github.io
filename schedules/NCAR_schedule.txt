@@ -20,7 +20,7 @@
 7/5/2026|NCAR|Chicagoland Speedway|Joliet, IL|Oval|Blaney|Elliot|Bell|Hamlin
 7/12/2026|NCAR|Atlanta Motor Speedway|Hampton, GA|Oval|Blaney|Elliot|Hocevar|Logano
 7/19/2026|NCAR|North Wilkesboro Raceway|North Wilkesboro, NC|Oval|Blaney|Elliot|Bell|Hamlin
-7/26/2026|NCAR|Indianapolis Motor Speedway|Indianapolis, IN|Oval||||||||
+7/26/2026|NCAR|Indianapolis Motor Speedway|Indianapolis, IN|Oval|Blaney|Byron|Hocevar|Hamlin
 8/9/2026|NCAR|Iowa Speedway|Newton, IA|Oval||||||||
 8/15/2026|NCAR|Richmond Raceway|Richmond, VA|Oval||||||||
 8/23/2026|NCAR|New Hampshire Speedway|Loudon, NH|Oval||||||||
