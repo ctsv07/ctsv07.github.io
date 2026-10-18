@@ -31,7 +31,7 @@
 9/27/2026|NCAR|Kansas Speedway|Kansas City, KS|Oval|Blaney|Byron|Bell|Hamlin
 10/4/2026|NCAR|Las Vegas Motor Speedway|Las Vegas, NV|Oval|Blaney|Byron|Bell|Hamlin
 10/11/2026|NCAR|Charlotte Motor Speedway|Charlotte, NC|Road|Blaney|Byron|Bell|Hamlin
-10/18/2026|NCAR|Phoenix Raceway|Avondale, AZ|Oval||||||||
+10/18/2026|NCAR|Phoenix Raceway|Avondale, AZ|Oval|Blaney|Byron|Bell|Hamlin
 10/25/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval||||||||
 11/1/2026|NCAR|Martinsville Speedway|Ridgeway, VA|Oval||||||||
 11/8/2026|NCAR|Homestead-Miami Speedway|Homestead, FL|Oval||||||||
