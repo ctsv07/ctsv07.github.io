@@ -34,4 +34,4 @@
 10/18/2026|NCAR|Phoenix Raceway|Avondale, AZ|Oval|Blaney|Byron|Bell|Hamlin
 10/25/2026|NCAR|Talladega Superspeedway|Lincoln, AL|Oval|Blaney|Byron|Bell|Hamlin
 11/1/2026|NCAR|Martinsville Speedway|Ridgeway, VA|Oval|Blaney|Byron|Bell|Hamlin
-11/8/2026|NCAR|Homestead-Miami Speedway|Homestead, FL|Oval||||||||
+11/8/2026|NCAR|Homestead-Miami Speedway|Homestead, FL|Oval|Blaney|Byron|Bell|Hamlin
